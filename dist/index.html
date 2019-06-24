@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Currency App</title>
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
+      integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/css/swiper.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap&subset=latin-ext"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/main.min.css" />
+  </head>
+  <body>
+    <main class="container">
+      <nav class="navbar">
+        <ul class="navbar_list">
+          <li class="navbar_item">
+            <a href="#home" class="home_link navbar_link">
+              <i class="navbar_sign fas fa-list-ul"></i>
+            </a>
+          </li>
+          <li class="navbar_item">
+            <a href="#about" class="about_link navbar_link">
+              <i class="navbar_sign far fa-sticky-note"></i>
+            </a>
+          </li>
+          <li class="navbar_item">
+            <a href="#rate" class=" rate_link navbar_link">
+              <i class="navbar_sign fas fa-dollar-sign"></i>
+            </a>
+          </li>
+          <li class="navbar_item">
+            <a href="#conversion" class="conversion_link navbar_link">
+              <i class="navbar_sign fas fa-exchange-alt"></i>
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+      <section class="default_currency_section">
+        <label for="default_currency">Główna waluta</label>
+        <select id="default_currency"></select>
+      </section>
+
+      <section id="home" class="section_wrapper">
+        <nav class="side_navbar" id="side_navbar_main">
+          <button class="side_navbar_button" id="modal_watched_button">
+            Twoje waluty
+          </button>
+        </nav>
+
+        <p id="current_rate_title" class="section_info"></p>
+        <section class="swiper-container">
+          <section class="swiper-wrapper" id="current_rate_cards"></section>
+        </section>
+      </section>
+
+      <section id="about" class="section_wrapper">
+        <section class="section_box">
+          <i class="fas fa-dollar-sign section_sign"></i>
+          <h3 class="section_title">Aktualny kurs</h3>
+          <p class="section_text">
+            Na naszej stronie możesz sprawdzić kurs dla 32 najpopularniejszych
+            walut. Wszystkie wartości na stronie są określane dla 1 jednostki
+            waluty głównej, którą możesz zmienić w dowolnym momencie na stronie
+            startowej.
+          </p>
+        </section>
+        <section class="section_box">
+          <i class="far fa-eye section_sign"></i>
+          <h3 class="section_title">"Obserwuj" waluty</h3>
+          <p class="section_text">
+            Po wybraniu opcji "Twoje waluty" na samej górze strony masz
+            możliwość wybrania walut obserwowanych. Kurs dla nich będzie
+            pokazywany w pierwszej kolejności na stronie startowej.
+          </p>
+        </section>
+        <section class="section_box">
+          <i class="fas fa-chart-line section_sign"></i>
+          <h3 class="section_title">Wykresy</h3>
+          <p class="section_text">
+            Po wybraniu walut wyświetlany jest dla niej aktualna wartość oraz
+            wykres kursu z okresu ostatnich 7 dni.
+          </p>
+        </section>
+        <section class="section_box">
+          <i class="fas fa-exchange-alt section_sign"></i>
+          <h3 class="section_title">Konwersja</h3>
+          <p class="section_text">
+            Przelicz wybraną walutę na jedną z dostępnych w naszej aplikacji
+            walut według aktualnych kursów wymiany.
+          </p>
+        </section>
+        <section class="section_box">
+          <i class="far fa-sticky-note section_sign"></i>
+          <h3 class="section_title">API</h3>
+          <p class="section_text">
+            API użyte na stronie do pobrania kursów pochodzą z strony
+            <a
+              href="https://exchangeratesapi.io/"
+              target="_blank"
+              class="section_link"
+              >ExchangeRatesApi</a
+            >. Czcionka Lato z
+            <a
+              href="https://fonts.google.com/"
+              target="_blank"
+              class="section_link"
+              >Google Fonts</a
+            >. Ikony z
+            <a
+              href="https://fontawesome.com/"
+              target="_blank"
+              class="section_link"
+              >Font Awesome</a
+            >. Inne biblioteki użyte na stronie
+            <a
+              href="https://idangero.us/swiper/"
+              target="_blank"
+              class="section_link"
+              >Swiper</a
+            >,
+            <a
+              href="https://www.chartjs.org/"
+              target="_blank"
+              class="section_link"
+              >Chart.js</a
+            >.
+          </p>
+        </section>
+        <section class="section_box">
+          <i class="far fa-user section_sign"></i>
+          <h3 class="section_title">Autor</h3>
+          <p class="section_text">
+            Aplikacja została stworzona przez
+            <a
+              href="https://martazaorska.github.io/portfolio/"
+              target="_blank"
+              class="section_link"
+              >Marta Zaroska</a
+            >. Jeśli chcesz się ze mną skontaktować lub obejrzeć moje inne
+            prace: marta.zaorska2@gmail.com <br />
+            <a
+              href="https://www.facebook.com/marta.zaorska.31"
+              target="_blank"
+              class="section_link"
+              ><i class="fab fa-facebook"></i
+            ></a>
+            <a
+              href="https://github.com/martazaorska"
+              target="_blank"
+              class="section_link"
+              ><i class="fab fa-github"></i
+            ></a>
+          </p>
+        </section>
+        <div class="clearfix"></div>
+      </section>
+
+      <section id="rate" class="section_wrapper">
+        <header class="section_header">
+          Kurs
+          <span id="rate_default_currency" class="text_green"></span> dla
+          <select id="rate_select" class="section_select_currency"></select>
+        </header>
+        <section class="section_content" id="rate_result"></section>
+        <section class="chart_wrapper">
+          <canvas id="rate_chart"></canvas>
+        </section>
+      </section>
+
+      <section id="conversion" class="section_wrapper">
+        <h3 class="section_title">Kalkulator walutowy</h3>
+        <section class="section_content section_info">
+          Przelicz
+          <input
+            type="number"
+            class="section_input"
+            min="0"
+            value="1"
+            id="conversion_value"
+          /><br />
+          <select id="conversion_from" class="section_select_currency"></select>
+          <i
+            class="section_button fas fa-exchange-alt"
+            id="toggle_currency"
+          ></i>
+          <select id="conversion_to" class="section_select_currency"></select>
+        </section>
+        <section class="section_content" id="conversion_result"></section>
+      </section>
+      <p class="copyright">
+        &copy; CurrencyApp <span id="copyright_date"></span>
+      </p>
+    </main>
+    <!--MODAL WINDOW-->
+    <section id="modal_watched_currency" class="modal_background modal_hidden">
+      <section class="modal_content">
+        <h3 class="modal_title">Zarządzaj swoimi walutami</h3>
+        <select id="watched_currency_select" class="modal_select"></select>
+        <button id="add_watched_currency" class="add_currency_button">
+          Obserwuj
+        </button>
+        <section id="watched_currency_list" class="modal_box"></section>
+        <button id="modal_watched_close" class="modal_button_close">
+          Wyjdź
+        </button>
+      </section>
+    </section>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/js/swiper.min.js"></script>
+    <script src="js/watched.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

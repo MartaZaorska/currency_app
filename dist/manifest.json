@@ -1,0 +1,26 @@
+{
+  "name": "Currency Application",
+  "short_name": "Currency App",
+  "start_url": ".",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#f9f9f9",
+  "theme_color": "#6dc05e",
+  "icons": [
+    {
+      "src": "./images/icons/icon-app-96x96.png",
+      "sizes": "96x96",
+      "type": "image/png"
+    },
+    {
+      "src": "./images/icons/icon-app-144x144.png",
+      "sizes": "144x144",
+      "type": "image/png"
+    },
+    {
+      "src": "./images/icons/icon-app-256x256.png",
+      "sizes": "256x256",
+      "type": "image/png"
+    }
+  ]
+}

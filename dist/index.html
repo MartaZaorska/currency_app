@@ -4,7 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name=" theme-color" content="#6dc05e" />
     <title>Currency App</title>
+    <link rel="manifest" href="manifest.json" />
+    <link rel="shortcut icon" href="./images/icons/icon-app-96x96.png" />
     <link
       rel="stylesheet"
       href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
@@ -20,6 +23,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="css/main.min.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/js/swiper.min.js"></script>
   </head>
   <body>
     <main class="container">
@@ -81,16 +85,16 @@
           <i class="far fa-eye section_sign"></i>
           <h3 class="section_title">"Obserwuj" waluty</h3>
           <p class="section_text">
-            Po wybraniu opcji "Twoje waluty" na samej górze strony masz
-            możliwość wybrania walut obserwowanych. Kurs dla nich będzie
-            pokazywany w pierwszej kolejności na stronie startowej.
+            Po wybraniu opcji "Twoje waluty" masz możliwość wybrania walut
+            obserwowanych. Kurs dla nich będzie pokazywany w pierwszej
+            kolejności na stronie startowej.
           </p>
         </section>
         <section class="section_box">
           <i class="fas fa-chart-line section_sign"></i>
           <h3 class="section_title">Wykresy</h3>
           <p class="section_text">
-            Po wybraniu walut wyświetlany jest dla niej aktualna wartość oraz
+            Po wybraniu waluty wyświetlana jest dla niej aktualna wartość oraz
             wykres kursu z okresu ostatnich 7 dni.
           </p>
         </section>
@@ -182,7 +186,7 @@
 
       <section id="conversion" class="section_wrapper">
         <h3 class="section_title">Kalkulator walutowy</h3>
-        <section class="section_content section_info">
+        <section class="section_content section_conversion_info">
           Przelicz
           <input
             type="number"
@@ -190,7 +194,7 @@
             min="0"
             value="1"
             id="conversion_value"
-          /><br />
+          /><br class="only_mobile" />
           <select id="conversion_from" class="section_select_currency"></select>
           <i
             class="section_button fas fa-exchange-alt"
@@ -219,7 +223,6 @@
       </section>
     </section>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/js/swiper.min.js"></script>
     <script src="js/watched.js"></script>
     <script src="js/main.js"></script>
   </body>

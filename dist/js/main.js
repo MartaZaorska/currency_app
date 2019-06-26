@@ -1,15 +1,19 @@
 document.addEventListener('DOMContentLoaded', () => {
-  const navbarList = document.querySelector('.navbar_list');
-  const modalWatchedButton = document.querySelector('#modal_watched_button');
-  const closeModal = document.querySelector('#modal_watched_close');
+  if ('serviceWorker' in navigator) {
+    window.addEventListener('load', () => {
+      navigator.serviceWorker
+        .register('./serviceWorker.js')
+        .then(reg => console.log('Service Worker: Registered'))
+        .catch(err => console.log('Service Worker: Error'));
+    });
+  }
+
   const modalWatchedCurrency = document.querySelector(
     '#modal_watched_currency'
   );
   const defaultCurrencySection = document.querySelector(
     '.default_currency_section'
   );
-  const copyrightDate = document.querySelector('#copyright_date');
-
   let defaultCurrency, singleRateCurrency;
 
   const allCurrency = {
@@ -59,9 +63,11 @@ document.addEventListener('DOMContentLoaded', () => {
     'NZD'
   ];
 
-  copyrightDate.textContent = new Date().getFullYear();
+  document.querySelector(
+    '#copyright_date'
+  ).textContent = new Date().getFullYear();
 
-  navbarList.addEventListener('click', e => {
+  document.querySelector('.navbar_list').addEventListener('click', e => {
     e.preventDefault();
     if (e.target.classList.contains('navbar_sign')) {
       const id = e.target.parentElement.getAttribute('href');
@@ -71,17 +77,21 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  modalWatchedButton.addEventListener('click', e => {
-    e.preventDefault();
-    modalWatchedCurrency.classList.remove('modal_hidden');
-  });
+  document
+    .querySelector('#modal_watched_button')
+    .addEventListener('click', e => {
+      e.preventDefault();
+      modalWatchedCurrency.classList.remove('modal_hidden');
+    });
 
-  closeModal.addEventListener('click', () => {
-    modalWatchedCurrency.classList.add('modal_hidden');
-  });
+  document
+    .querySelector('#modal_watched_close')
+    .addEventListener('click', () => {
+      modalWatchedCurrency.classList.add('modal_hidden');
+    });
 
   window.addEventListener('scroll', () => {
-    if (scrollY > 100) {
+    if (window.scrollY > 100) {
       defaultCurrencySection.style.transform = 'translateX(105%)';
     } else {
       defaultCurrencySection.style.transform = 'translateX(0%)';
@@ -268,17 +278,9 @@ document.addEventListener('DOMContentLoaded', () => {
       });
       if (window.innerWidth <= 640) {
         let swiper = new Swiper('.swiper-container', {
-          effect: 'coverflow',
-          grabCursor: true,
-          centeredSlides: true,
-          slidesPerView: 'auto',
-          coverflowEffect: {
-            rotate: 50,
-            stretch: 0,
-            depth: 100,
-            modifier: 1,
-            slideShadows: false
-          }
+          slidesPerView: 1.5,
+          spaceBetween: 15,
+          centeredSlides: true
         });
       }
     });
@@ -407,7 +409,7 @@ document.addEventListener('DOMContentLoaded', () => {
           conversionFromSelect.value
         } = ${value} ${
           conversionToSelect.value
-        }</span> <br/> <span class="section_info">Aktualizacja ${
+        }</span> <br/> <span class="section_conversion_info">Aktualizacja ${
           data.date
         }</span>
         `;

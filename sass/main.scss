@@ -36,25 +36,12 @@ body {
   background: $colorLight;
   color: $colorDark;
   font-family: "Lato", sans-serif;
+  font-display: fallback;
   overflow-x: hidden;
 }
 
 .clearfix {
   clear: both;
-}
-
-::-webkit-scrollbar {
-  background: transparent;
-  width: 15px;
-  &-thumb {
-    box-shadow: inset 0 0 15px 15px rgba(110, 110, 110, 0.4);
-    border: solid 5px transparent;
-    border-radius: 1.3em;
-  }
-  &-track {
-    box-shadow: inset 0 0 15px 15px transparent;
-    border: solid 5px transparent;
-  }
 }
 
 /*---- LOADER ----*/

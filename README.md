@@ -16,7 +16,7 @@ The API data used on the site to download the exchange rate comes from [Exchange
 
 ## Demo
 
-See online my project: https://martazaorska.github.io/currency_app/
+See online my project: https://currency-app-martazaorska.netlify.app/
 
 ## Libraries
 
